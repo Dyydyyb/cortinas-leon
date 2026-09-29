@@ -1,0 +1,31 @@
+# Dependencias
+node_modules/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Screenshots de testing (no necesarios en producción)
+screenshots/
+
+# Archivos de test
+test_and_capture.js
+
+# Imágenes de trabajo temporales en raíz (estas deberían estar en /assets)
+boutique_camaieu.jpg
+clean_shop_shutter.jpg
+cochera_moderna.jpg
+crown_gears_roller.jpg
+electric_motor_gear.jpg
+garage_black_roller.jpg
+garage_hardware.jpg
+garage_modern_roller.jpg
+garage_shutter.jpg
+garage_sliding_up.jpg
+metal_slats_detail.jpg
+storefront_metal.jpg
+warehouse_rollup.jpg
