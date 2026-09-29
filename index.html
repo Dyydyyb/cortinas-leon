@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cortinas León | Venta, Instalación, Motorización y Reparación de Cortinas Metálicas</title>
+  <meta name="description" content="Cortinas León: Venta, instalación, motorización con motores originales Motic y reparación de cortinas metálicas para locales, galpones, cocheras, viviendas e industrias. Envíos a todo el país. Presupuestos sin cargo.">
+  <meta name="keywords" content="cortinas metalicas, cortinas para locales, portones enrollables, motores motic, reparacion de cortinas, instalacion de cortinas metalicas, cortinas leon argentina">
+  <meta name="author" content="Cortinas León">
+  
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Cortinas León | Tu cortina, en buenas manos">
+  <meta property="og:description" content="Especialistas en venta, instalación, reparación y motorización de cortinas metálicas. Envíos a todo el país.">
+  <meta property="og:image" content="assets/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Google Fonts: Barlow (Industrial Bold) & Inter (Limpia) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Hojas de Estilo -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       INTRO ANIMATION: APERTURA DE CORTINA METÁLICA (1.5s - 2.2s)
+       Animación realista de chapa galvanizada cerrada que se abre deslizándose
+       hacia arriba con traqueteo mecánico y revela el contenido.
+       ========================================================================== -->
+  <aside id="curtain-intro" aria-label="Animación de apertura de cortina metálica">
+    <!-- Taparrollo / Caja superior de eje -->
+    <div class="curtain-rollbox">
+      <div class="curtain-brand-plate">
+        <div class="curtain-plate-text">
+          <span>●</span> Cortinas León <span>•</span> Industria Argentina
+        </div>
+      </div>
+      <div class="curtain-intro-controls">
+        <button id="curtain-sound-btn" class="curtain-ctrl-btn" type="button" title="Activar sonido mecánico opcional">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+          </svg>
+          Sonido: OFF
+        </button>
+        <button id="curtain-skip-btn" class="curtain-ctrl-btn" type="button">
+          Saltar intro ➔
+        </button>
+      </div>
+    </div>
+
+    <!-- Marco y guías de deslizamiento -->
+    <div class="curtain-frame">
+      <div class="curtain-guide-left"></div>
+      <div class="curtain-guide-right"></div>
+
+      <!-- Paño de tablillas metálicas que se desliza hacia arriba -->
+      <div id="curtain-door" class="curtain-door">
+        <div id="curtain-slats" class="curtain-slats-wrapper">
+          <!-- Generado dinámicamente con JS para ajuste milimétrico -->
+        </div>
+
+        <!-- Zócalo de seguridad inferior con aldabas y goma de sellado -->
+        <div class="curtain-bottom-bar">
+          <div class="bottom-hasp" title="Aldaba de candado lateral"></div>
+          <div class="bottom-handle">
+            <span>CORTINAS LEÓN • SEGURIDAD INDUSTRIAL</span>
+          </div>
+          <div class="bottom-hasp" title="Aldaba de candado lateral"></div>
+          <div class="bottom-rubber-seal"></div>
+        </div>
+      </div>
+
+      <!-- Destello de luz natural al elevarse la cortina -->
+      <div class="curtain-light-gap"></div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       HEADER FIJO (STICKY) EN VERDE SOBRIO (#3D7A3D)
+       Con logo redondeado, navegación limpia y botón de WhatsApp destacado
+       ========================================================================== -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <!-- Logo Redondeado de Cortinas León -->
+      <a href="#inicio" class="brand-link" aria-label="Cortinas León - Volver al inicio">
+        <img src="assets/logo.png" alt="Logo oficial Cortinas León" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-title">Cortinas León</span>
+          <span class="brand-tagline">Cortinas Metálicas & Motores</span>
+        </div>
+      </a>
+
+      <!-- Menú Desktop -->
+      <nav class="desktop-nav" aria-label="Menú principal">
+        <ul class="nav-menu">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#rubros" class="nav-link">Rubros</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="#motic" class="nav-link">Motores Motic</a></li>
+          <li><a href="#ventajas" class="nav-link">Ventajas</a></li>
+          <li><a href="#galeria" class="nav-link">Galería</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Botón WhatsApp Destacado & Toggle Mobile -->
+      <div class="header-actions">
+        <a href="https://wa.me/5491126135602?text=Hola,%20quiero%20un%20presupuesto%20sin%20cargo%20para%20una%20cortina%20metálica" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-header-wa"
+           id="btn-header-whatsapp">
+          <svg viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.971.531 1.77.813 2.796.813h.005c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm3.376 8.204c-.14.394-.816.744-1.127.79-.31.045-.712.062-2.158-.538-1.745-.724-2.868-2.496-2.955-2.612-.087-.116-.708-.941-.708-1.795 0-.853.447-1.272.607-1.446.16-.174.349-.218.465-.218.116 0 .233.001.334.006.107.005.25.04.388.373.146.349.495 1.208.538 1.296.044.087.073.189.015.305-.058.116-.087.189-.174.291-.087.102-.184.228-.263.306-.088.087-.179.182-.077.357.102.175.452.747.969 1.208.665.594 1.226.778 1.401.865.174.087.277.073.379-.044.102-.116.437-.509.553-.684.116-.175.233-.146.393-.087.16.058 1.018.48 1.193.567.175.087.291.131.335.204.043.073.043.422-.097.816z"/>
+          </svg>
+          Presupuesto WhatsApp
+        </a>
+
+        <!-- Botón Hamburguesa -->
+        <button class="btn-mobile-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Menú Desplegable Mobile -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+      <ul class="mobile-nav-list">
+        <li><a href="#inicio" class="mobile-nav-link">Inicio</a></li>
+        <li><a href="#rubros" class="mobile-nav-link">Rubros</a></li>
+        <li><a href="#servicios" class="mobile-nav-link">Servicios</a></li>
+        <li><a href="#motic" class="mobile-nav-link">Motores Motic</a></li>
+        <li><a href="#ventajas" class="mobile-nav-link">Ventajas</a></li>
+        <li><a href="#galeria" class="mobile-nav-link">Galería</a></li>
+        <li><a href="#contacto" class="mobile-nav-link">Contacto</a></li>
+      </ul>
+      <a href="https://wa.me/5491126135602?text=Hola,%20quiero%20un%20presupuesto%20sin%20cargo%20para%20una%20cortina%20metálica" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="btn-primary mobile-nav-cta">
+        Pedir Presupuesto WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION: "Tu cortina, en buenas manos"
+         Fondo blanco, diseño sobrio y robusto con credenciales de fábrica
+         ========================================================================== */ -->
+    <section class="hero-section" id="inicio">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Columna Izquierda: Mensaje Central & CTAs -->
+          <div class="hero-content reveal-item">
+            <div class="hero-badge-national">
+              <svg viewBox="0 0 24 24">
+                <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+              </svg>
+              Envíos a todo el país • Fábrica Directa
+            </div>
+
+            <h1 class="hero-title">
+              Tu cortina,
+              <span class="highlight-green">en buenas manos.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Venta, instalación, motorización y reparación de cortinas metálicas para hogares, comercios e industrias. Fabricación robusta con chapa galvanizada reforzada y motores oficiales Motic.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="#contacto" class="btn-primary" id="btn-hero-cta">
+                Pedí tu presupuesto sin cargo
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              <a href="#rubros" class="btn-secondary">
+                Ver tipos de cortinas
+              </a>
+            </div>
+
+            <!-- Badges de Confianza Rápidos -->
+            <div class="hero-trust-bar">
+              <div class="trust-item">
+                <div class="trust-icon-box">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                  </svg>
+                </div>
+                <div class="trust-text-group">
+                  <h4>Garantía Escrita</h4>
+                  <p>En cortinas y motores originales</p>
+                </div>
+              </div>
+
+              <div class="trust-item">
+                <div class="trust-icon-box">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                  </svg>
+                </div>
+                <div class="trust-text-group">
+                  <h4>Presupuestos en el Acto</h4>
+                  <p>Asesoramiento técnico inmediato</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Demostrador Técnico Interactivo de Cortina -->
+          <div class="hero-visual reveal-item">
+            <div class="hero-interactive-shutter" id="hero-shutter-demo">
+              <!-- Taparrollo y Estado del Motor -->
+              <div class="shutter-hood">
+                <div class="hood-plate">
+                  <span class="hood-brand">Cortinas León • Sistema Automatizado</span>
+                  <span class="hood-motor-status" id="hero-motor-indicator">
+                    <span class="led-indicator" id="hero-led"></span>
+                    <span id="hero-status-text">Motor Motic: En Espera</span>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Portal y Guías con Cortina Móvil -->
+              <div class="shutter-portal">
+                <div class="shutter-guide left-guide"></div>
+                <div class="shutter-guide right-guide"></div>
+
+                <!-- Interior Iluminado Revelado -->
+                <div class="shutter-interior-view">
+                  <div class="interior-storefront">
+                    <div class="interior-sign">Fábrica Directa • Cortinas León</div>
+                    <div class="interior-display">
+                      <div class="display-box">
+                        <span class="box-badge">Seguridad 100%</span>
+                        Chapa Galvanizada N° 20
+                      </div>
+                      <div class="display-box">
+                        <span class="box-badge">Automatización</span>
+                        Motores Motic Oficiales
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Paño Móvil de Cortina Metálica -->
+                <div class="shutter-curtain-door" id="hero-curtain-door">
+                  <div class="hero-slats-wrapper" id="hero-slats-container">
+                    <div class="hero-slat"><span class="hero-slat-dot"></span><span class="hero-slat-dot"></span></div>
+                    <div class="hero-slat"><span class="hero-slat-dot"></span><span class="hero-slat-dot"></span></div>
+                    <div class="hero-slat"><span class="hero-slat-dot"></span><span class="hero-slat-dot"></span></div>
+                    <div class="hero-slat"><span class="hero-slat-dot"></span><span class="hero-slat-dot"></span></div>
+                    <div class="hero-slat"><span class="hero-slat-dot"></span><span class="hero-slat-dot"></span></div>
+                    <div class="hero-slat"><span class="hero-slat-dot"></span><span class="hero-slat-dot"></span></div>
+                    <div class="hero-slat"><span class="hero-slat-dot"></span><span class="hero-slat-dot"></span></div>
+                    <div class="hero-slat"><span class="hero-slat-dot"></span><span class="hero-slat-dot"></span></div>
+                    <div class="hero-slat"><span class="hero-slat-dot"></span><span class="hero-slat-dot"></span></div>
+                    <div class="hero-slat"><span class="hero-slat-dot"></span><span class="hero-slat-dot"></span></div>
+                    <div class="hero-slat"><span class="hero-slat-dot"></span><span class="hero-slat-dot"></span></div>
+                    <div class="hero-slat"><span class="hero-slat-dot"></span><span class="hero-slat-dot"></span></div>
+                  </div>
+                  <div class="hero-bottom-bar">
+                    <div class="bar-hasp"></div>
+                    <span class="bar-title">CORTINAS LEÓN • ACERO REFORZADO</span>
+                    <div class="bar-hasp"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Barra de Controles Interactivos -->
+              <div class="shutter-controls-bar">
+                <div class="shutter-action-btns">
+                  <button type="button" class="btn-demo-action" id="demo-btn-open">
+                    <svg viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+                    Subir
+                  </button>
+                  <button type="button" class="btn-demo-action" id="demo-btn-close">
+                    <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>
+                    Bajar
+                  </button>
+                </div>
+                <div class="shutter-type-selector">
+                  <span class="type-label">Tipo:</span>
+                  <button type="button" class="btn-type-pill active" data-type="ciega">Ciega</button>
+                  <button type="button" class="btn-type-pill" data-type="microperforada">Microperforada</button>
+                  <button type="button" class="btn-type-pill" data-type="malla">Malla</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN SLIDER ANIMADO DE CORTINAS POR RUBRO
+         Locales, Galpones, Cocheras, Viviendas, Industrias
+         Con banner verde y texto blanco superpuesto como en sus posteos
+         ========================================================================== -->
+    <section class="rubros-section" id="rubros">
+      <div class="container">
+        <div class="section-header reveal-item">
+          <span class="section-tag">Soluciones a Medida</span>
+          <h2 class="section-title">Cortinas Metálicas por Rubro</h2>
+          <p class="section-subtitle">
+            Diseñamos, fabricamos y montamos la cortina exacta según las exigencias de seguridad, estética y tráfico de cada espacio.
+          </p>
+        </div>
+
+        <div class="slider-container reveal-item">
+          <div class="slider-viewport" id="slider-viewport">
+            <div class="slider-track" id="rubros-track">
+              
+              <!-- Slide 1: Locales -->
+              <article class="rubro-slide">
+                <div class="rubro-image-container">
+                  <div class="rubro-demo-stage stage-locales">
+                    <div class="demo-stage-backdrop"></div>
+                    <div class="stage-guide-left"></div>
+                    <div class="stage-guide-right"></div>
+                    <div class="demo-stage-curtain">
+                      <div class="demo-stage-slats">
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                      </div>
+                      <div class="demo-stage-bar">
+                        <span class="demo-stage-bar-tag">Local Comercial</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rubro-banner-green">
+                    <h3 class="rubro-banner-title">Locales</h3>
+                    <span class="rubro-banner-badge">Comercial</span>
+                  </div>
+                </div>
+                <div class="rubro-content">
+                  <h4 class="rubro-phrase">Cortinas resistentes para la seguridad de tu local comercial.</h4>
+                  <p class="rubro-description">
+                    Protegé tu vidriera y mercadería con sistemas ciegos para máxima inviolabilidad o microperforados para exhibición nocturna con iluminación interior.
+                  </p>
+                  <ul class="rubro-specs-list">
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Opciones: Ciega, Microperforada o Malla
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Cerradura central y aldabas reforzadas
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Accionamiento manual o motorizado
+                    </li>
+                  </ul>
+                  <a href="#contacto" class="rubro-action-link" data-rubro="Locales">
+                    Cotizar para Local ➔
+                  </a>
+                </div>
+              </article>
+
+              <!-- Slide 2: Galpones -->
+              <article class="rubro-slide">
+                <div class="rubro-image-container">
+                  <div class="rubro-demo-stage stage-galpones">
+                    <div class="demo-stage-backdrop"></div>
+                    <div class="stage-guide-left"></div>
+                    <div class="stage-guide-right"></div>
+                    <div class="demo-stage-curtain">
+                      <div class="demo-stage-slats">
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                      </div>
+                      <div class="demo-stage-bar">
+                        <span class="demo-stage-bar-tag">Portón N° 20</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rubro-banner-green">
+                    <h3 class="rubro-banner-title">Galpones</h3>
+                    <span class="rubro-banner-badge">Logística</span>
+                  </div>
+                </div>
+                <div class="rubro-content">
+                  <h4 class="rubro-phrase">Portones de gran porte y uso intensivo para galpones y depósitos.</h4>
+                  <p class="rubro-description">
+                    Estructuras de acero de calibre pesado con guías profundas contra vientos fuertes. Ideales para maniobras de camiones y centros de distribución.
+                  </p>
+                  <ul class="rubro-specs-list">
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Dimensiones especiales de gran altura y ancho
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Motorreductor Motic de alto torque
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Sistema de destrabe manual a cadena
+                    </li>
+                  </ul>
+                  <a href="#contacto" class="rubro-action-link" data-rubro="Galpones">
+                    Cotizar para Galpón ➔
+                  </a>
+                </div>
+              </article>
+
+              <!-- Slide 3: Cocheras -->
+              <article class="rubro-slide">
+                <div class="rubro-image-container">
+                  <div class="rubro-demo-stage stage-cocheras">
+                    <div class="garage-remote-widget">
+                      <span class="remote-pulse-dot"></span>
+                      Motic Remoto
+                    </div>
+                    <div class="demo-stage-backdrop"></div>
+                    <div class="stage-guide-left"></div>
+                    <div class="stage-guide-right"></div>
+                    <div class="demo-stage-curtain">
+                      <div class="demo-stage-slats">
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                      </div>
+                      <div class="demo-stage-bar">
+                        <span class="demo-stage-bar-tag">Acceso Vehicular</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rubro-banner-green">
+                    <h3 class="rubro-banner-title">Cocheras</h3>
+                    <span class="rubro-banner-badge">Consorcios & Casas</span>
+                  </div>
+                </div>
+                <div class="rubro-content">
+                  <h4 class="rubro-phrase">Sistemas silenciosos y automatizados para cocheras particulares y edificios.</h4>
+                  <p class="rubro-description">
+                    Apertura rápida y segura mediante control remoto. Optimización total del espacio sin restar altura útil en el ingreso vehicular.
+                  </p>
+                  <ul class="rubro-specs-list">
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Controles remotos multicanal de largo alcance
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Rodamientos blindados ultra silenciosos
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Parada automática y fotocélulas de seguridad
+                    </li>
+                  </ul>
+                  <a href="#contacto" class="rubro-action-link" data-rubro="Cocheras">
+                    Cotizar para Cochera ➔
+                  </a>
+                </div>
+              </article>
+
+              <!-- Slide 4: Viviendas -->
+              <article class="rubro-slide">
+                <div class="rubro-image-container">
+                  <div class="rubro-demo-stage stage-viviendas">
+                    <div class="demo-stage-backdrop"></div>
+                    <div class="stage-guide-left"></div>
+                    <div class="stage-guide-right"></div>
+                    <div class="demo-stage-curtain">
+                      <div class="demo-stage-slats">
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                      </div>
+                      <div class="demo-stage-bar">
+                        <span class="demo-stage-bar-tag">Protección Hogar</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rubro-banner-green">
+                    <h3 class="rubro-banner-title">Viviendas</h3>
+                    <span class="rubro-banner-badge">Residencial</span>
+                  </div>
+                </div>
+                <div class="rubro-content">
+                  <h4 class="rubro-phrase">Protección perimetral reforzada y estética limpia para el hogar.</h4>
+                  <p class="rubro-description">
+                    Tranquilidad para tu familia sin descuidar la fachada. Reemplazo moderno y compacto de las viejas rejas para puertas y ventanales.
+                  </p>
+                  <ul class="rubro-specs-list">
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Acabado galvanizado sobrio o pintura horneada
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Caja taparrollo compacta interior o exterior
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Accionamiento motorizado con tecla de pared
+                    </li>
+                  </ul>
+                  <a href="#contacto" class="rubro-action-link" data-rubro="Viviendas">
+                    Cotizar para Vivienda ➔
+                  </a>
+                </div>
+              </article>
+
+              <!-- Slide 5: Industrias -->
+              <article class="rubro-slide">
+                <div class="rubro-image-container">
+                  <div class="rubro-demo-stage stage-industrias">
+                    <div class="dock-safety-strip"></div>
+                    <div class="demo-stage-backdrop"></div>
+                    <div class="stage-guide-left"></div>
+                    <div class="stage-guide-right"></div>
+                    <div class="demo-stage-curtain">
+                      <div class="demo-stage-slats">
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                        <div class="stage-slat-row"></div>
+                      </div>
+                      <div class="demo-stage-bar">
+                        <span class="demo-stage-bar-tag">Servicio Pesado</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="rubro-banner-green">
+                    <h3 class="rubro-banner-title">Industrias</h3>
+                    <span class="rubro-banner-badge">Uso Pesado</span>
+                  </div>
+                </div>
+                <div class="rubro-content">
+                  <h4 class="rubro-phrase">Máxima durabilidad y resistencia mecánica para accesos de planta.</h4>
+                  <p class="rubro-description">
+                    Fabricadas para soportar ciclos continuos de trabajo diario. Seguridad para maquinarias, materias primas y sectores restringidos.
+                  </p>
+                  <ul class="rubro-specs-list">
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Chapa N° 20 y 22 de máxima densidad
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Motorización industrial de hasta 1500 kg
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+                      Resistencia a ambientes corrosivos o intemperie
+                    </li>
+                  </ul>
+                  <a href="#contacto" class="rubro-action-link" data-rubro="Industrias">
+                    Cotizar para Industria ➔
+                  </a>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Controles de Navegación del Slider -->
+          <div class="slider-controls">
+            <div class="slider-dots" id="slider-dots" aria-label="Indicadores del carrusel"></div>
+            <div class="slider-arrows">
+              <button class="slider-arrow-btn" id="slider-prev" aria-label="Cortina anterior">
+                <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+              </button>
+              <button class="slider-arrow-btn" id="slider-next" aria-label="Siguiente cortina">
+                <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN SERVICIOS: Venta, Instalación, Motores, Reparación
+         Fondo blanco con borde fino verde e íconos de trazo sobrio
+         ========================================================================== -->
+    <section class="services-section" id="servicios">
+      <div class="container">
+        <div class="section-header reveal-item">
+          <span class="section-tag">Servicios Especializados</span>
+          <h2 class="section-title">Solución Integral en Cortinas Metálicas</h2>
+          <p class="section-subtitle">
+            Cubrimos cada etapa del proyecto: desde el cálculo de pesos y fabricación, hasta el montaje final, automatizaciones y mantenimiento preventivo.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Servicio 1: Venta -->
+          <article class="service-card reveal-item">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-4-4H9v-2h6v2zm0-4H9V9h6v2z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Venta</h3>
+            <p class="service-description">
+              Fabricación directa a medida en chapa galvanizada de primera selección. Diseños ciegos reforzados, microperforados, tubulares y mallas rombo o redondas.
+            </p>
+            <ul class="service-feature-list">
+              <li>Chapas N° 20, 22 y 24 certificadas</li>
+              <li>Zócalos en ángulo de hierro pesado</li>
+              <li>Guías con tratamiento anticorrosivo</li>
+            </ul>
+            <a href="#contacto" class="service-btn">
+              Consultar Venta ➔
+            </a>
+          </article>
+
+          <!-- Servicio 2: Instalación -->
+          <article class="service-card reveal-item">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Instalación</h3>
+            <p class="service-description">
+              Montaje profesional a plomo y nivel. Ajuste de resortes de torsión, anclajes estructurales seguros y calibración de apertura para un andar perfecto y liviano.
+            </p>
+            <ul class="service-feature-list">
+              <li>Mano de obra técnica especializada</li>
+              <li>Alineación milimétrica de guías</li>
+              <li>Entrega funcionando en el día</li>
+            </ul>
+            <a href="#contacto" class="service-btn">
+              Pedir Instalación ➔
+            </a>
+          </article>
+
+          <!-- Servicio 3: Motores -->
+          <article class="service-card reveal-item">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Motores</h3>
+            <p class="service-description">
+              Automatizaciones con motores oficiales Motic. Transformamos tu cortina manual en eléctrica sin necesidad de romper o cambiar el paño existente.
+            </p>
+            <ul class="service-feature-list">
+              <li>Equipos para 600 kg, 800 kg y 1500 kg</li>
+              <li>Opción PM500 Solar autónoma</li>
+              <li>Botonera fija + controles remotos</li>
+            </ul>
+            <a href="#motic" class="service-btn">
+              Ver Motores Motic ➔
+            </a>
+          </article>
+
+          <!-- Servicio 4: Reparación -->
+          <article class="service-card reveal-item">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l1.9-1.9C9.32 19.58 10.62 20 12 20c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm1-10h-2v5h5v-2h-3z"/>
+              </svg>
+            </div>
+            <h3 class="service-title">Reparación</h3>
+            <p class="service-description">
+              Servicio técnico rápido ante emergencias: destrabe de cortinas caídas, cambio de tablillas golpeadas, reposición de resortes rotos y cambio de poleas.
+            </p>
+            <ul class="service-feature-list">
+              <li>Diagnóstico honesto en el acto</li>
+              <li>Repuestos legítimos en stock</li>
+              <li>Solución definitiva y ajuste general</li>
+            </ul>
+            <a href="#contacto" class="service-btn">
+              Pedir Service Técnico ➔
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN MOTORIZACIÓN MOTIC: Equipos originales, plano y técnico
+         PM 600/700/800, PM500 Solar, PM 1000/1500, motor tubular a cadena
+         Garantía de 2 a 5 años según modelo.
+         ========================================================================== -->
+    <section class="motic-section" id="motic">
+      <div class="container">
+        <div class="section-header reveal-item">
+          <div class="motic-header-badge">Tecnología Líder en Automatización</div>
+          <h2 class="section-title">Motorización Oficial Motic</h2>
+          <p class="section-subtitle">
+            Trabajamos con motores 100% originales de la firma Motic. Potencia comprobada, funcionamiento suave y máxima durabilidad sin fallas.
+          </p>
+        </div>
+
+        <!-- 5 Pilares Clave Motic -->
+        <div class="motic-key-features reveal-item">
+          <div class="motic-feat-pill">
+            <h4>Potente</h4>
+            <p>Torque optimizado para cargas de 500 a 1500 kg sin recalentamiento.</p>
+          </div>
+          <div class="motic-feat-pill">
+            <h4>Confiable</h4>
+            <p>Engranajes templados en baño de grasa sintética para trabajo continuo.</p>
+          </div>
+          <div class="motic-feat-pill">
+            <h4>Duradero</h4>
+            <p>Estructura sellada contra polvo y humedad de intemperie.</p>
+          </div>
+          <div class="motic-feat-pill">
+            <h4>Sustentable</h4>
+            <p>Opción con panel solar y baterías de respaldo ante cortes de luz.</p>
+          </div>
+          <div class="motic-feat-pill">
+            <h4>Garantía 2-5 Años</h4>
+            <p>Respaldo por escrito oficial según el modelo instalado.</p>
+          </div>
+        </div>
+
+        <!-- Grilla de Modelos Técnicos -->
+        <div class="motic-models-grid">
+          <!-- Modelo 1: PM 600 / 700 / 800 -->
+          <article class="motic-card reveal-item">
+            <div class="motic-card-header">
+              <span class="motic-tag-original">Original Motic</span>
+              <span class="motic-warranty-badge">
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                Garantía 2 Años
+              </span>
+            </div>
+            <h3 class="motic-model-name">PM 600 / 700 / 800</h3>
+            <p class="motic-model-desc">
+              El motor estándar más elegido para comercios, cocheras particulares y accesos residenciales. Excelente balance entre empuje, velocidad y silencio.
+            </p>
+            <div class="motic-specs-box">
+              <div class="motic-spec-row">
+                <span class="label">Capacidad de arrastre:</span>
+                <span class="val">Hasta 600 / 800 kg</span>
+              </div>
+              <div class="motic-spec-row">
+                <span class="label">Alimentación:</span>
+                <span class="val">220V Monofásico</span>
+              </div>
+              <div class="motic-spec-row">
+                <span class="label">Final de carrera:</span>
+                <span class="val">Mecánico de precisión</span>
+              </div>
+              <div class="motic-spec-row">
+                <span class="label">Desbloqueo:</span>
+                <span class="val">Palanca manual</span>
+              </div>
+            </div>
+            <a href="#contacto" class="btn-outline-green">Consultar Precio ➔</a>
+          </article>
+
+          <!-- Modelo 2: PM500 Solar -->
+          <article class="motic-card reveal-item">
+            <div class="motic-card-header">
+              <span class="motic-tag-original">Sustentable</span>
+              <span class="motic-warranty-badge">
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                Garantía 3 Años
+              </span>
+            </div>
+            <h3 class="motic-model-name">PM500 Solar</h3>
+            <p class="motic-model-desc">
+              Innovación energética autónoma. Funciona con kit fotovoltaico y baterías, garantizando operatividad ininterrumpida incluso durante cortes de red.
+            </p>
+            <div class="motic-specs-box">
+              <div class="motic-spec-row">
+                <span class="label">Capacidad de arrastre:</span>
+                <span class="val">Hasta 500 kg</span>
+              </div>
+              <div class="motic-spec-row">
+                <span class="label">Alimentación:</span>
+                <span class="val">Panel Solar + Batería 24V</span>
+              </div>
+              <div class="motic-spec-row">
+                <span class="label">Autonomía:</span>
+                <span class="val">Hasta 40 ciclos sin red</span>
+              </div>
+              <div class="motic-spec-row">
+                <span class="label">Ideal para:</span>
+                <span class="val">Zonas con cortes frecuentes</span>
+              </div>
+            </div>
+            <a href="#contacto" class="btn-outline-green">Consultar Kit Solar ➔</a>
+          </article>
+
+          <!-- Modelo 3: PM 1000 / 1500 -->
+          <article class="motic-card reveal-item">
+            <div class="motic-card-header">
+              <span class="motic-tag-original">Industrial Pesado</span>
+              <span class="motic-warranty-badge">
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                Garantía 5 Años
+              </span>
+            </div>
+            <h3 class="motic-model-name">PM 1000 / 1500</h3>
+            <p class="motic-model-desc">
+              Máxima potencia para cortinas de grandes dimensiones en galpones logísticos, naves fabriles y accesos de pesaje. Trabajo pesado garantizado.
+            </p>
+            <div class="motic-specs-box">
+              <div class="motic-spec-row">
+                <span class="label">Capacidad de arrastre:</span>
+                <span class="val">1.000 kg a 1.500 kg</span>
+              </div>
+              <div class="motic-spec-row">
+                <span class="label">Alimentación:</span>
+                <span class="val">Trifásico / Monofásico</span>
+              </div>
+              <div class="motic-spec-row">
+                <span class="label">Freno electromagnético:</span>
+                <span class="val">Doble zapata blindada</span>
+              </div>
+              <div class="motic-spec-row">
+                <span class="label">Uso:</span>
+                <span class="val">Alto tráfico continuo</span>
+              </div>
+            </div>
+            <a href="#contacto" class="btn-outline-green">Consultar Pesado ➔</a>
+          </article>
+
+          <!-- Modelo 4: Motor Tubular a Cadena -->
+          <article class="motic-card reveal-item">
+            <div class="motic-card-header">
+              <span class="motic-tag-original">Compacto & Manual</span>
+              <span class="motic-warranty-badge">
+                <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                Garantía 3 Años
+              </span>
+            </div>
+            <h3 class="motic-model-name">Tubular a Cadena</h3>
+            <p class="motic-model-desc">
+              Diseño de eje directo. Ocupa un espacio mínimo en el taparrollo e incorpora cadena de emergencia para subir o bajar la cortina sin energía eléctrica.
+            </p>
+            <div class="motic-specs-box">
+              <div class="motic-spec-row">
+                <span class="label">Instalación:</span>
+                <span class="val">Directo dentro del eje</span>
+              </div>
+              <div class="motic-spec-row">
+                <span class="label">Emergencia:</span>
+                <span class="val">Cadena reductora sinfín</span>
+              </div>
+              <div class="motic-spec-row">
+                <span class="label">Estética:</span>
+                <span class="val">100% oculto a la vista</span>
+              </div>
+        <!-- Tarjeta Demostradora Técnica Interactiva de Motorreductor Motic -->
+        <div class="motic-simulator-card reveal-item" id="motic-sim-box">
+          <div class="motic-sim-header">
+            <h3 class="motic-sim-title">
+              Simulador Técnico Motic <span>Demostración Oficial</span>
+            </h3>
+            <div class="motic-sim-nav">
+              <button type="button" class="btn-sim-model active" data-model="pm800">PM 600 / 800</button>
+              <button type="button" class="btn-sim-model" data-model="solar">PM500 Solar</button>
+              <button type="button" class="btn-sim-model" data-model="pm1500">PM 1000 / 1500</button>
+              <button type="button" class="btn-sim-model" data-model="tubular">Tubular a Cadena</button>
+            </div>
+          </div>
+          <div class="motic-sim-body">
+            <div class="motic-schematic-box">
+              <svg class="motic-svg-diagram" viewBox="0 0 320 200">
+                <rect x="20" y="40" width="130" height="120" fill="#2d3540" stroke="#3d7a3d" stroke-width="2" rx="4"/>
+                <line x1="35" y1="55" x2="35" y2="145" stroke="#485362" stroke-width="3"/>
+                <line x1="50" y1="55" x2="50" y2="145" stroke="#485362" stroke-width="3"/>
+                <line x1="65" y1="55" x2="65" y2="145" stroke="#485362" stroke-width="3"/>
+                <line x1="80" y1="55" x2="80" y2="145" stroke="#485362" stroke-width="3"/>
+                <!-- Corona reductora -->
+                <circle cx="210" cy="100" r="45" fill="#1b1f24" stroke="#94a3b8" stroke-width="2"/>
+                <g class="gear-rotating" transform="translate(210, 100)">
+                  <circle cx="0" cy="0" r="28" fill="#3d7a3d" opacity="0.25"/>
+                  <rect x="-5" y="-42" width="10" height="84" fill="#cbd5e1" rx="2"/>
+                  <rect x="-42" y="-5" width="84" height="10" fill="#cbd5e1" rx="2"/>
+                  <circle cx="0" cy="0" r="12" fill="#14171b" stroke="#fff" stroke-width="2"/>
+                </g>
+                <text x="85" y="105" fill="#3d7a3d" font-family="sans-serif" font-size="11" font-weight="900" text-anchor="middle">MOTIC</text>
+              </svg>
+            </div>
+            <div class="motic-sim-specs">
+              <h4 class="motic-sim-model-title" id="sim-model-name">PM 600 / 800 (Comercial y Cocheras)</h4>
+              <p class="motic-sim-desc" id="sim-model-desc">
+                Engranaje helicoidal en baño de grasa con parada milimétrica por microswitch. Tracción suave y segura para uso frecuente diario.
+              </p>
+              <div class="motic-sim-specs-list">
+                <div class="sim-spec-box">
+                  <span class="lbl">Capacidad de Carga</span>
+                  <span class="val" id="sim-spec-weight">Hasta 800 kg</span>
+                </div>
+                <div class="sim-spec-box">
+                  <span class="lbl">Garantía Escrita</span>
+                  <span class="val" id="sim-spec-warr">2 Años Oficial</span>
+                </div>
+                <div class="sim-spec-box">
+                  <span class="lbl">Tiempo de Apertura</span>
+                  <span class="val" id="sim-spec-speed">15 - 20 segundos</span>
+                </div>
+                <div class="sim-spec-box">
+                  <span class="lbl">Desbloqueo Manual</span>
+                  <span class="val" id="sim-spec-manual">Palanca rápida</span>
+                </div>
+              </div>
+              <a href="#contacto" class="btn-primary" style="padding: 10px 20px; font-size: 0.88rem;">
+                Cotizar este modelo Motic ➔
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN BLOQUE DE IMPACTO VERDE SOBRIO:
+         "Resistencia y durabilidad, calidad y confianza"
+         Fondo verde (#3D7A3D), texto blanco, beneficios y estadísticas sólidas
+         ========================================================================== -->
+    <section class="impact-section" id="ventajas">
+      <div class="container">
+        <div class="impact-header reveal-item">
+          <h2 class="impact-title">Resistencia y Durabilidad, Calidad y Confianza</h2>
+          <p class="impact-subtitle">
+            En Cortinas León combinamos materiales pesados certificados, precisión de taller y soporte permanente para que tu inversión esté 100% protegida.
+          </p>
+        </div>
+
+        <!-- 5 Beneficios Principales -->
+        <div class="impact-benefits-grid reveal-item">
+          <div class="impact-benefit-card">
+            <div class="impact-benefit-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+            </div>
+            <h4>Resistencia y Durabilidad</h4>
+            <p>Chapas de alto espesor y guías con nervio central diseñadas para resistir impactos y ráfagas.</p>
+          </div>
+
+          <div class="impact-benefit-card">
+            <div class="impact-benefit-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <h4>Equipos de Primera Calidad</h4>
+            <p>Solo componentes certificados, rodamientos sellados y automatizaciones oficiales Motic.</p>
+          </div>
+
+          <div class="impact-benefit-card">
+            <div class="impact-benefit-icon">
+              <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+            </div>
+            <h4>Asesoramiento Personalizado</h4>
+            <p>Evaluamos las medidas y requerimientos exactos de tu espacio para recomendarte la solución ideal.</p>
+          </div>
+
+          <div class="impact-benefit-card">
+            <div class="impact-benefit-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+            <h4>Trabajos Garantizados</h4>
+            <p>Garantía escrita respaldando tanto los materiales como la instalación y funcionamiento.</p>
+          </div>
+
+          <div class="impact-benefit-card">
+            <div class="impact-benefit-icon">
+              <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+            </div>
+            <h4>Atención Rápida</h4>
+            <p>Presupuestos en menos de 2 horas y plazos de entrega e instalación rigurosamente cumplidos.</p>
+          </div>
+        </div>
+
+        <!-- Barra de Estadísticas Robustas -->
+        <div class="impact-stats-bar reveal-item">
+          <div class="impact-stat-item">
+            <div class="stat-number">+15</div>
+            <div class="stat-label">Años de Trayectoria</div>
+          </div>
+          <div class="impact-stat-item">
+            <div class="stat-number">+2.500</div>
+            <div class="stat-label">Cortinas Instaladas</div>
+          </div>
+          <div class="impact-stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Cobertura Nacional</div>
+          </div>
+          <div class="impact-stat-item">
+            <div class="stat-number">2 a 5</div>
+            <div class="stat-label">Años de Garantía Motic</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN GALERÍA DE TRABAJOS REALIZADOS
+         Grilla de fotos reales de instalaciones en locales, galpones y cocheras
+         ========================================================================== -->
+    <section class="gallery-section" id="galeria">
+      <div class="container">
+        <div class="section-header reveal-item">
+          <span class="section-tag">Nuestras Obras</span>
+          <h2 class="section-title">Galería de Trabajos Realizados</h2>
+          <p class="section-subtitle">
+            Hacé clic en cualquier imagen para ver en detalle las terminaciones, herrajes y montajes de nuestras cortinas.
+          </p>
+        </div>
+
+        <!-- Filtros de Galería -->
+        <div class="gallery-filters reveal-item">
+          <button class="gallery-filter-btn active" data-filter="all">Todos los Trabajos</button>
+          <button class="gallery-filter-btn" data-filter="locales">Locales Comerciales</button>
+          <button class="gallery-filter-btn" data-filter="galpones">Galpones & Naves</button>
+          <button class="gallery-filter-btn" data-filter="cocheras">Cocheras & Hogar</button>
+          <button class="gallery-filter-btn" data-filter="motores">Motores Motic</button>
+        </div>
+
+        <!-- Grilla Demostrativa de Obras y Tipos de Cortina -->
+        <div class="gallery-grid">
+          <!-- Item 1: Galpones -->
+          <div class="gallery-item reveal-item" data-category="galpones" data-desc="Acceso para camiones • Chapa galvanizada N° 20">
+            <div class="gallery-demo-display">
+              <span class="gallery-demo-badge-tech"><span class="tech-dot-pulse"></span> Industrial</span>
+              <svg viewBox="0 0 400 300" preserveAspectRatio="none">
+                <rect width="400" height="300" fill="#1e2329"/>
+                <!-- Portal Galpón -->
+                <rect x="30" y="20" width="340" height="280" fill="#14171c" stroke="#4a525d" stroke-width="6"/>
+                <!-- Viga superior amarilla/negra -->
+                <rect x="30" y="20" width="340" height="25" fill="#eab308"/>
+                <line x1="60" y1="20" x2="80" y2="45" stroke="#1c2024" stroke-width="12"/>
+                <line x1="120" y1="20" x2="140" y2="45" stroke="#1c2024" stroke-width="12"/>
+                <line x1="180" y1="20" x2="200" y2="45" stroke="#1c2024" stroke-width="12"/>
+                <line x1="240" y1="20" x2="260" y2="45" stroke="#1c2024" stroke-width="12"/>
+                <line x1="300" y1="20" x2="320" y2="45" stroke="#1c2024" stroke-width="12"/>
+                <!-- Tablillas pesadas -->
+                <g fill="#8e97a4" stroke="#4a525d" stroke-width="1.5">
+                  <rect x="42" y="55" width="316" height="18" fill="url(#steelGrad)"/>
+                  <rect x="42" y="75" width="316" height="18" fill="url(#steelGrad)"/>
+                  <rect x="42" y="95" width="316" height="18" fill="url(#steelGrad)"/>
+                  <rect x="42" y="115" width="316" height="18" fill="url(#steelGrad)"/>
+                  <rect x="42" y="135" width="316" height="18" fill="url(#steelGrad)"/>
+                  <rect x="42" y="155" width="316" height="18" fill="url(#steelGrad)"/>
+                  <rect x="42" y="175" width="316" height="18" fill="url(#steelGrad)"/>
+                  <rect x="42" y="195" width="316" height="18" fill="url(#steelGrad)"/>
+                  <rect x="42" y="215" width="316" height="18" fill="url(#steelGrad)"/>
+                  <rect x="42" y="235" width="316" height="24" fill="#2d333b"/>
+                </g>
+                <defs>
+                  <linearGradient id="steelGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#cfd5dc"/>
+                    <stop offset="50%" stop-color="#9aa2ae"/>
+                    <stop offset="100%" stop-color="#727a86"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Galpón Industrial</span>
+              <h4 class="gallery-item-title">Portón Enrollable Pesado</h4>
+              <p class="gallery-item-loc">Acceso para camiones • Chapa galvanizada N° 20</p>
+            </div>
+          </div>
+
+          <!-- Item 2: Cocheras -->
+          <div class="gallery-item reveal-item" data-category="cocheras" data-desc="Apertura con control remoto Motic • Zona Norte">
+            <div class="gallery-demo-display">
+              <span class="gallery-demo-badge-tech"><span class="tech-dot-pulse"></span> Silenciosa</span>
+              <svg viewBox="0 0 400 300" preserveAspectRatio="none">
+                <rect width="400" height="300" fill="#252b33"/>
+                <!-- Marco Garaje -->
+                <rect x="40" y="30" width="320" height="270" fill="#181c22" stroke="#3d7a3d" stroke-width="4"/>
+                <!-- Taparrollo moderno -->
+                <rect x="40" y="30" width="320" height="35" fill="#2e353f" stroke="#485362" stroke-width="1"/>
+                <text x="200" y="52" fill="#9ca3af" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle" letter-spacing="2">AUTOMATISMO RESIDENCIAL</text>
+                <!-- Tablillas cortina -->
+                <g fill="url(#steelGrad)" stroke="#555f6d" stroke-width="1">
+                  <rect x="50" y="75" width="300" height="15"/>
+                  <rect x="50" y="92" width="300" height="15"/>
+                  <rect x="50" y="109" width="300" height="15"/>
+                  <rect x="50" y="126" width="300" height="15"/>
+                  <rect x="50" y="143" width="300" height="15"/>
+                  <rect x="50" y="160" width="300" height="15"/>
+                  <rect x="50" y="177" width="300" height="15"/>
+                  <rect x="50" y="194" width="300" height="15"/>
+                  <rect x="50" y="211" width="300" height="20" fill="#1f242b"/>
+                </g>
+                <!-- Emisor remoto onda -->
+                <circle cx="330" cy="50" r="4" fill="#3d7a3d"/>
+                <path d="M336 44 A 8 8 0 0 1 336 56" fill="none" stroke="#3d7a3d" stroke-width="2"/>
+                <path d="M340 40 A 14 14 0 0 1 340 60" fill="none" stroke="#3d7a3d" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Cochera Particular</span>
+              <h4 class="gallery-item-title">Cortina Automática Silenciosa</h4>
+              <p class="gallery-item-loc">Apertura con control remoto Motic • Zona Norte</p>
+            </div>
+          </div>
+
+          <!-- Item 3: Locales Ciega -->
+          <div class="gallery-item reveal-item" data-category="locales" data-desc="Zócalo con cerradura multipunto y aldabas • CABA">
+            <div class="gallery-demo-display">
+              <span class="gallery-demo-badge-tech"><span class="tech-dot-pulse"></span> Chapa Ciega</span>
+              <svg viewBox="0 0 400 300" preserveAspectRatio="none">
+                <rect width="400" height="300" fill="#1b1f24"/>
+                <rect x="35" y="25" width="330" height="275" fill="#121519" stroke="#505a68" stroke-width="4"/>
+                <g fill="url(#steelGrad)" stroke="#424a56" stroke-width="1.5">
+                  <rect x="45" y="35" width="310" height="19"/>
+                  <rect x="45" y="56" width="310" height="19"/>
+                  <rect x="45" y="77" width="310" height="19"/>
+                  <rect x="45" y="98" width="310" height="19"/>
+                  <rect x="45" y="119" width="310" height="19"/>
+                  <rect x="45" y="140" width="310" height="19"/>
+                  <rect x="45" y="161" width="310" height="19"/>
+                  <rect x="45" y="182" width="310" height="19"/>
+                  <rect x="45" y="203" width="310" height="19"/>
+                  <rect x="45" y="224" width="310" height="28" fill="#1f232a"/>
+                </g>
+                <!-- Cerrojo central -->
+                <circle cx="200" cy="238" r="7" fill="#adb5bd" stroke="#000" stroke-width="1.5"/>
+                <rect x="70" y="234" width="22" height="12" fill="#2b313a" stroke="#8b95a2" stroke-width="1.5"/>
+                <rect x="308" y="234" width="22" height="12" fill="#2b313a" stroke="#8b95a2" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Local Comercial</span>
+              <h4 class="gallery-item-title">Cortina Ciega Reforzada</h4>
+              <p class="gallery-item-loc">Zócalo con cerradura multipunto y aldabas • CABA</p>
+            </div>
+          </div>
+
+          <!-- Item 4: Locales Microperforada -->
+          <div class="gallery-item reveal-item" data-category="locales" data-desc="Visión nocturna e iluminación interior para vidrieras">
+            <div class="gallery-demo-display">
+              <span class="gallery-demo-badge-tech"><span class="tech-dot-pulse"></span> Microperforada</span>
+              <svg viewBox="0 0 400 300" preserveAspectRatio="none">
+                <rect width="400" height="300" fill="#1a1e23"/>
+                <!-- Fondo vidriera con luz cálida -->
+                <rect x="40" y="30" width="320" height="270" fill="#2c281e"/>
+                <circle cx="200" cy="110" r="70" fill="rgba(250, 204, 21, 0.15)"/>
+                <rect x="150" y="140" width="100" height="60" fill="rgba(255,255,255,0.08)" rx="4"/>
+                <!-- Trama microperforada -->
+                <pattern id="dotPattern" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
+                  <circle cx="4" cy="4" r="1.5" fill="#facc15" opacity="0.6"/>
+                </pattern>
+                <rect x="48" y="38" width="304" height="200" fill="url(#steelGrad)" opacity="0.88"/>
+                <rect x="48" y="38" width="304" height="200" fill="url(#dotPattern)"/>
+                <rect x="48" y="238" width="304" height="26" fill="#181c22" stroke="#485362" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Local Comercial</span>
+              <h4 class="gallery-item-title">Microperforada Visión Nocturna</h4>
+              <p class="gallery-item-loc">Cierre hermético con exhibición permanente de vidriera</p>
+            </div>
+          </div>
+
+          <!-- Item 5: Malla Rectangular -->
+          <div class="gallery-item reveal-item" data-category="locales" data-desc="Máxima aireación y visibilidad sin perder seguridad">
+            <div class="gallery-demo-display">
+              <span class="gallery-demo-badge-tech"><span class="tech-dot-pulse"></span> Malla Acero</span>
+              <svg viewBox="0 0 400 300" preserveAspectRatio="none">
+                <rect width="400" height="300" fill="#171b20"/>
+                <rect x="40" y="30" width="320" height="270" fill="#111418"/>
+                <!-- Patrón de malla de varilla de acero -->
+                <g stroke="#9ca3af" stroke-width="2.5">
+                  <!-- Horizontales -->
+                  <line x1="45" y1="60" x2="355" y2="60"/>
+                  <line x1="45" y1="95" x2="355" y2="95"/>
+                  <line x1="45" y1="130" x2="355" y2="130"/>
+                  <line x1="45" y1="165" x2="355" y2="165"/>
+                  <line x1="45" y1="200" x2="355" y2="200"/>
+                  <line x1="45" y1="235" x2="355" y2="235"/>
+                  <!-- Eslabones verticales entrelazados -->
+                  <line x1="80" y1="60" x2="80" y2="95"/>
+                  <line x1="140" y1="60" x2="140" y2="95"/>
+                  <line x1="200" y1="60" x2="200" y2="95"/>
+                  <line x1="260" y1="60" x2="260" y2="95"/>
+                  <line x1="320" y1="60" x2="320" y2="95"/>
+                  
+                  <line x1="110" y1="95" x2="110" y2="130"/>
+                  <line x1="170" y1="95" x2="170" y2="130"/>
+                  <line x1="230" y1="95" x2="230" y2="130"/>
+                  <line x1="290" y1="95" x2="290" y2="130"/>
+
+                  <line x1="80" y1="130" x2="80" y2="165"/>
+                  <line x1="140" y1="130" x2="140" y2="165"/>
+                  <line x1="200" y1="130" x2="200" y2="165"/>
+                  <line x1="260" y1="130" x2="260" y2="165"/>
+                  <line x1="320" y1="130" x2="320" y2="165"/>
+                </g>
+                <rect x="40" y="240" width="320" height="30" fill="#282e36" stroke="#4a5360" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Malla de Seguridad</span>
+              <h4 class="gallery-item-title">Malla Rectangular Reforzada</h4>
+              <p class="gallery-item-loc">Ideal para shoppings, galerías y vidrieras comerciales</p>
+            </div>
+          </div>
+
+          <!-- Item 6: Motores Motic -->
+          <div class="gallery-item reveal-item" data-category="motores" data-desc="Montaje lateral con reductor y sistema de cadena de emergencia">
+            <div class="gallery-demo-display">
+              <span class="gallery-demo-badge-tech"><span class="tech-dot-pulse"></span> Motor Oficial</span>
+              <svg viewBox="0 0 400 300" preserveAspectRatio="none">
+                <rect width="400" height="300" fill="#1a1e24"/>
+                <!-- Cuerpo Motorreductor Motic -->
+                <rect x="70" y="50" width="160" height="190" fill="#2d3540" stroke="#3d7a3d" stroke-width="3" rx="6"/>
+                <!-- Aletas de refrigeración -->
+                <line x1="85" y1="75" x2="85" y2="215" stroke="#485362" stroke-width="4"/>
+                <line x1="105" y1="75" x2="105" y2="215" stroke="#485362" stroke-width="4"/>
+                <line x1="125" y1="75" x2="125" y2="215" stroke="#485362" stroke-width="4"/>
+                <line x1="145" y1="75" x2="145" y2="215" stroke="#485362" stroke-width="4"/>
+                <!-- Corona dentada y piñón giratorio -->
+                <circle cx="280" cy="145" r="50" fill="#1e2329" stroke="#9ca3af" stroke-width="3"/>
+                <g class="gear-rotating" transform="translate(280, 145)">
+                  <circle cx="0" cy="0" r="30" fill="#3d7a3d" opacity="0.3"/>
+                  <rect x="-6" y="-48" width="12" height="96" fill="#adb5bd" rx="2"/>
+                  <rect x="-48" y="-6" width="96" height="12" fill="#adb5bd" rx="2"/>
+                  <circle cx="0" cy="0" r="14" fill="#14171b" stroke="#e5e7eb" stroke-width="2"/>
+                </g>
+                <!-- Placa Motic -->
+                <rect x="80" y="100" width="70" height="30" fill="#111317" rx="3"/>
+                <text x="115" y="120" fill="#3d7a3d" font-family="sans-serif" font-size="12" font-weight="900" text-anchor="middle">MOTIC</text>
+                <!-- Cadena de emergencia manual -->
+                <path d="M290 195 L290 270 M270 195 L270 270" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 3"/>
+              </svg>
+            </div>
+            <div class="gallery-item-overlay">
+              <span class="gallery-item-badge">Motor Motic</span>
+              <h4 class="gallery-item-title">Automatización PM Industrial</h4>
+              <p class="gallery-item-loc">Montaje lateral con reductor y sistema de cadena</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Lightbox para Ampliar Demos de Galería -->
+    <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-label="Visualizador de instalación">
+      <div class="lightbox-content">
+        <button class="lightbox-close-btn" id="lightbox-close" aria-label="Cerrar modal">✕</button>
+        <div class="lightbox-img-box" id="lightbox-svg-box" style="display:flex; align-items:center; justify-content:center; background:#1a1e24; border-radius:8px; overflow:hidden; min-height:240px;">
+          <!-- SVG clonado dinámicamente por JS -->
+        </div>
+        <div class="lightbox-details">
+          <div>
+            <span class="gallery-item-badge" id="lightbox-badge">Instalación</span>
+            <h3 id="lightbox-title" style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; text-transform: uppercase;">Trabajo Realizado</h3>
+            <p id="lightbox-loc" style="font-size:0.85rem; color: var(--text-muted); margin-top:4px;"></p>
+          </div>
+          <a href="#" id="lightbox-wa-btn" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 10px 18px; font-size: 0.9rem;">
+            Consultar por este trabajo ➔
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ==========================================================================
+         SECCIÓN CONTACTO & PRESUPUESTOS
+         Formulario dinámico a WhatsApp + Botón Directo + Datos de Envíos y Pagos
+         ========================================================================== -->
+    <section class="contact-section" id="contacto">
+      <div class="container">
+        <div class="section-header reveal-item">
+          <span class="section-tag">Presupuesto Inmediato</span>
+          <h2 class="section-title">Hacé tu Consulta Sin Cargo</h2>
+          <p class="section-subtitle">
+            Completá los datos y nuestro equipo técnico te responderá a la brevedad con la mejor cotización y plazos de entrega.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Columna Izquierda: Botón Directo y Medios de Pago / Envío -->
+          <div class="contact-info-col reveal-item">
+            <!-- Tarjeta de WhatsApp Directo con texto precargado exacto -->
+            <div class="contact-card-direct">
+              <h3>Atención Rápida por WhatsApp</h3>
+              <p>
+                Si preferís una respuesta inmediata, escribinos directo con tus medidas aproximadas o consultas técnicas.
+              </p>
+              
+              <a href="https://wa.me/5491126135602?text=Hola,%20quiero%20un%20presupuesto%20sin%20cargo%20para%20una%20cortina%20metálica" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 class="btn-contact-wa-direct"
+                 id="btn-whatsapp-direct">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.971.531 1.77.813 2.796.813h.005c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm3.376 8.204c-.14.394-.816.744-1.127.79-.31.045-.712.062-2.158-.538-1.745-.724-2.868-2.496-2.955-2.612-.087-.116-.708-.941-.708-1.795 0-.853.447-1.272.607-1.446.16-.174.349-.218.465-.218.116 0 .233.001.334.006.107.005.25.04.388.373.146.349.495 1.208.538 1.296.044.087.073.189.015.305-.058.116-.087.189-.174.291-.087.102-.184.228-.263.306-.088.087-.179.182-.077.357.102.175.452.747.969 1.208.665.594 1.226.778 1.401.865.174.087.277.073.379-.044.102-.116.437-.509.553-.684.116-.175.233-.146.393-.087.16.058 1.018.48 1.193.567.175.087.291.131.335.204.043.073.043.422-.097.816z"/>
+                </svg>
+                WhatsApp: 11 2613-5602
+              </a>
+
+              <ul class="contact-meta-list">
+                <li class="contact-meta-item">
+                  <div class="meta-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  </div>
+                  <div class="meta-text">
+                    <h5>Cobertura</h5>
+                    <p>Envíos a todo el país y montajes en CABA y Gran Buenos Aires</p>
+                  </div>
+                </li>
+
+                <li class="contact-meta-item">
+                  <div class="meta-icon">
+                    <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                  </div>
+                  <div class="meta-text">
+                    <h5>Horarios de Atención</h5>
+                    <p>Lunes a Viernes de 8:00 a 19:00 hs • Sábados de 8:00 a 14:00 hs</p>
+                  </div>
+                </li>
+
+                <li class="contact-meta-item">
+                  <div class="meta-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  </div>
+                  <div class="meta-text">
+                    <h5>Instagram Oficial</h5>
+                    <p><a href="https://instagram.com/cortinas_leon" target="_blank" rel="noopener noreferrer">@cortinas_leon</a></p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tarjeta Envíos a todo el país y Medios de Pago -->
+            <div class="shipping-payment-box">
+              <h4>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--green-primary)"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+                Envíos a Todo el País
+              </h4>
+              <p>
+                Embalaje reforzado para transporte de larga distancia. Despachamos por el transporte o expreso de tu preferencia hacia cualquier localidad de Argentina.
+              </p>
+              
+              <h4 style="margin-top: 14px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--green-primary)"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+                Todos los Medios de Pago
+              </h4>
+              <div class="payment-methods-tags">
+                <span class="payment-tag">Efectivo</span>
+                <span class="payment-tag">Transferencia Bancaria</span>
+                <span class="payment-tag">Tarjetas de Débito y Crédito</span>
+                <span class="payment-tag">Cheques</span>
+                <span class="payment-tag">Factura A y B</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Formulario de Presupuesto Directo a WhatsApp -->
+          <div class="contact-form-card reveal-item">
+            <h3>Solicitá tu Presupuesto</h3>
+            <p>Completá el formulario para generar tu mensaje y continuar la charla por WhatsApp con uno de nuestros técnicos.</p>
+
+            <form id="budget-form">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Nombre y Apellido *</label>
+                <input type="text" id="form-name" class="form-control" placeholder="Ej. Juan Pérez" required>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-phone" class="form-label">Teléfono / WhatsApp *</label>
+                  <input type="tel" id="form-phone" class="form-control" placeholder="Ej. 11 2345-6789" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-rubro" class="form-label">Tipo de Espacio / Rubro *</label>
+                  <select id="form-rubro" class="form-control" required>
+                    <option value="Local Comercial">Local Comercial</option>
+                    <option value="Galpón / Depósito">Galpón / Depósito</option>
+                    <option value="Cochera Particular">Cochera Particular / Consorcio</option>
+                    <option value="Vivienda / Residencial">Vivienda / Residencial</option>
+                    <option value="Industria">Industria / Fábrica</option>
+                    <option value="Reparación / Motor Motic">Reparación o Motor Motic</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-dimensions" class="form-label">Medidas Aproximadas (Ancho x Alto en metros)</label>
+                <input type="text" id="form-dimensions" class="form-control" placeholder="Ej. 3.20m de ancho x 2.60m de alto (opcional)">
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Detalles de la consulta</label>
+                <textarea id="form-message" class="form-control" placeholder="¿Buscás cortina manual o con motor? ¿Tenés cortina para reparar? Contanos más..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary btn-form-submit" id="btn-submit-form">
+                Enviar y Solicitar Presupuesto ➔
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER VERDE SOBRIO
+       Con logo redondeado, instagram @cortinas_leon, datos y copyright
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Columna 1: Marca & Logo -->
+        <div class="footer-brand">
+          <div class="footer-logo-row">
+            <img src="assets/logo.png" alt="Logo Cortinas León" class="footer-logo-img">
+            <div>
+              <div class="footer-brand-title">Cortinas León</div>
+              <div class="footer-brand-sub">Fábrica & Reparaciones</div>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Especialistas en cortinas metálicas de chapa galvanizada reforzada y motores oficiales Motic. Seguridad, robustez y asesoramiento profesional en todo el país.
+          </p>
+          <a href="https://instagram.com/cortinas_leon" target="_blank" rel="noopener noreferrer" class="footer-social-link">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            Instagram: @cortinas_leon
+          </a>
+        </div>
+
+        <!-- Columna 2: Rubros -->
+        <div>
+          <h4 class="footer-col-title">Rubros</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#rubros">Cortinas para Locales</a></li>
+            <li class="footer-link-item"><a href="#rubros">Portones para Galpones</a></li>
+            <li class="footer-link-item"><a href="#rubros">Cortinas para Cocheras</a></li>
+            <li class="footer-link-item"><a href="#rubros">Accesos para Viviendas</a></li>
+            <li class="footer-link-item"><a href="#rubros">Cortinas Industriales</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Servicios -->
+        <div>
+          <h4 class="footer-col-title">Servicios</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="#servicios">Venta y Fabricación</a></li>
+            <li class="footer-link-item"><a href="#servicios">Instalación y Montaje</a></li>
+            <li class="footer-link-item"><a href="#motic">Motores Originales Motic</a></li>
+            <li class="footer-link-item"><a href="#servicios">Service y Reparaciones</a></li>
+            <li class="footer-link-item"><a href="#contacto">Envíos a todo el país</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Contacto Directo -->
+        <div>
+          <h4 class="footer-col-title">Contacto</h4>
+          <ul class="footer-contact-details">
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/></svg>
+              <span>Tel / WA: <strong>11 2613-5602</strong></span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              <span>Envíos a todo el territorio nacional</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              <span>Lun a Vie 8:00 - 19:00 hs</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Barra Inferior de Copyright y Replay de Cortina -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 Cortinas León. Todos los derechos reservados. Fabricación e instalación de cortinas metálicas.
+        </div>
+        <div>
+          <button class="btn-replay-curtain" type="button" onclick="replayCurtainAnimation()" title="Ver de nuevo la animación de apertura de cortina metálica">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+            </svg>
+            Volver a ver apertura de cortina
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       BOTÓN FLOTANTE DE WHATSAPP (Visible en todo momento, pulso sutil sin neón)
+       ========================================================================== -->
+  <a href="https://wa.me/5491126135602?text=Hola,%20quiero%20un%20presupuesto%20sin%20cargo%20para%20una%20cortina%20metálica" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="floating-wa-btn" 
+     id="floating-whatsapp"
+     aria-label="Contactar por WhatsApp al 11 2613-5602">
+    <svg viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.971.531 1.77.813 2.796.813h.005c3.18 0 5.767-2.586 5.768-5.766 0-3.18-2.587-5.766-5.768-5.766zm3.376 8.204c-.14.394-.816.744-1.127.79-.31.045-.712.062-2.158-.538-1.745-.724-2.868-2.496-2.955-2.612-.087-.116-.708-.941-.708-1.795 0-.853.447-1.272.607-1.446.16-.174.349-.218.465-.218.116 0 .233.001.334.006.107.005.25.04.388.373.146.349.495 1.208.538 1.296.044.087.073.189.015.305-.058.116-.087.189-.174.291-.087.102-.184.228-.263.306-.088.087-.179.182-.077.357.102.175.452.747.969 1.208.665.594 1.226.778 1.401.865.174.087.277.073.379-.044.102-.116.437-.509.553-.684.116-.175.233-.146.393-.087.16.058 1.018.48 1.193.567.175.087.291.131.335.204.043.073.043.422-.097.816z"/>
+    </svg>
+    <span class="floating-wa-tooltip">Presupuesto sin cargo • 11 2613-5602</span>
+  </a>
+
+  <!-- Script Principal -->
+  <script src="js/main.js"></script>
+</body>
+</html>
